@@ -31,11 +31,11 @@ img {
 }
 
 body {
-  height: 1200px;
+  height: auto;
   font-size: 18px;
   font-family: sans-serif;
   /* color: #5d6063; */
-  background: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
+  background-image: repeating-linear-gradient(#6d35f0, #ffcccc);
 }
 
 a:link,
@@ -133,8 +133,10 @@ a:hover {
 .flex-container {
   display: flex;
   flex-direction: column;
-  /* background: linear-gradient(#6d35f0, #ffcccc); */
-  background-color: DodgerBlue;
+  /* justify-content: space-between; */
+  background: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
+
+  /* background-color: DodgerBlue; */
   margin: auto;
   max-width: 1200px;
   z-index: 0;
@@ -152,33 +154,112 @@ a:hover {
   border-radius: 5%;
   z-index: 0;
 
-  animation-name: bounce;
-  animation-duration: 3s;
+  animation-duration: 5s;
   animation-iteration-count: 1;
 }
 
-@keyframes bounce {
+@keyframes bounce1 {
   0% {
-    top: -25px;
+    top: -500px;
+  }
+  50% {
+    top: 400px;
   }
   100% {
-    top: 249px;
+    top: 0px;
+  }
+}
+
+@keyframes bounce2 {
+  0% {
+    top: -1000px;
+  }
+  50% {
+    top: 400px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes bounce3 {
+  0% {
+    top: -1500px;
+  }
+  50% {
+    top: 400px;
+  }
+  100% {
+    top: 0px;
   }
 }
 
 .main-image1 {
   position: relative;
   left: 35px;
+  animation-name: bounce1;
   animation-timing-function: ease-out;
 }
 
 .main-image2 {
-  display: flex;
   position: relative;
   left: 450px;
+  animation-name: bounce2;
+  animation-timing-function: ease-out;
 }
 
 .main-image3 {
   position: relative;
-  left: 865px;
+  left: 845px;
+  animation-name: bounce3;
+  animation-timing-function: ease-out;
+}
+
+.quotation-font {
+  font-family: "Great Vibes", cursive;
+  font-size: 40px;
+  text-align: left;
+  color: rgb(24, 3, 3);
+}
+
+/* container for picutres */
+.flex-container > p {
+  /* background-color: #f1f1f1; */
+  margin-top: 150px;
+  position: absolute;
+
+  margin-bottom: 70px;
+  padding: 20px 20px;
+
+  height: 350px;
+  border-radius: 5%;
+  z-index: 0;
+
+  /* text-align: center; */
+
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+}
+
+.first-quote {
+  left: 550px;
+  width: 700px;
+  animation-name: bounce1;
+  animation-timing-function: ease-out;
+}
+.second-quote {
+  left: 135px;
+  width: 300px;
+  top: 575px;
+}
+
+.third-quote {
+  left: 950px;
+  width: 300px;
+  top: 575px;
+}
+.fourth-quote {
+  left: 135px;
+  width: 700px;
+  top: 1145px;
 }
