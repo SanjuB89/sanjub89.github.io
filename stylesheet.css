@@ -35,7 +35,13 @@ body {
   font-size: 18px;
   font-family: sans-serif;
   /* color: #5d6063; */
-  background-image: repeating-linear-gradient(#6d35f0, #ffcccc);
+  /* background-image: repeating-linear-gradient(#6d35f0, #ffcccc); */
+  background: linear-gradient(
+    120deg,
+    rgba(154, 241, 255, 1) 0%,
+    rgba(206, 206, 224, 1) 40%,
+    rgba(0, 212, 255, 1) 96%
+  );
 }
 
 a:link,
@@ -55,15 +61,66 @@ a:hover {
   width: 100%;
   padding: 10px;
   background: #d6e9fe;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   z-index: 0;
 }
+
+.header-font {
+  font-family: "Sancreek", cursive;
+  font-size: 50px;
+}
+
 .logo {
+  display: flex;
+  position: relative;
+  left: -17px;
   margin: 0px 40px;
   width: 4em;
   height: 4em;
   border: 1px solid;
   border-radius: 20%;
+  /* 
+  animation-duration: 5s;
+  animation-name: bounce-sign;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out; */
+
+  /* needs work here for parallel execution */
+  animation: bounce-sign 3s 1 ease-out;
+  animation: rotation 2s infinite linear;
 }
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes bounce-sign {
+  /* 0% {
+    left: -500px;
+  }
+  50% {
+    left: 400px;
+  }
+  100% {
+    left: -17px;
+  } */
+
+  0% {
+    left: -500px;
+  }
+  50% {
+    left: 400px;
+  }
+  100% {
+    left: -17px;
+  }
+}
+
 .menu {
   margin-top: 15px;
 }
@@ -134,9 +191,10 @@ a:hover {
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
-  background: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
-
+  /* background: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%); */
+  background-image: url("flex-background-img.jpg");
   /* background-color: DodgerBlue; */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   margin: auto;
   max-width: 1200px;
   z-index: 0;
@@ -153,8 +211,8 @@ a:hover {
   height: 350px;
   border-radius: 5%;
   z-index: 0;
-
-  animation-duration: 5s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  animation-duration: 3s;
   animation-iteration-count: 1;
 }
 
@@ -221,7 +279,11 @@ a:hover {
   text-align: left;
   color: rgb(24, 3, 3);
 }
-
+.elevator-pitch {
+  font-family: "Great Vibes", cursive;
+  font-size: 35px;
+  color: rgb(44, 5, 5);
+}
 /* container for picutres */
 .flex-container > p {
   /* background-color: #f1f1f1; */
