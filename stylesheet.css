@@ -1,7 +1,7 @@
-p {
+/* p {
   color: teal;
   font-family: "Lemonada", cursive;
-}
+} */
 
 .stylesheet-container {
   display: flex;
@@ -33,7 +33,7 @@ img {
 body {
   height: auto;
   font-size: 18px;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   /* color: #5d6063; */
   /* background-image: repeating-linear-gradient(#6d35f0, #ffcccc); */
   background: linear-gradient(
@@ -62,7 +62,7 @@ a:hover {
   padding: 10px;
   background: #d6e9fe;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  z-index: 0;
+  z-index: 10;
 }
 
 .header-font {
@@ -100,16 +100,6 @@ a:hover {
 }
 
 @keyframes bounce-sign {
-  /* 0% {
-    left: -500px;
-  }
-  50% {
-    left: 400px;
-  }
-  100% {
-    left: -17px;
-  } */
-
   0% {
     left: -500px;
   }
@@ -200,8 +190,18 @@ a:hover {
   z-index: 0;
 }
 
-/* container for picutres */
-.flex-container > div {
+.flex-container-row {
+  display: flex;
+  border: 1px solid black;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-around;
+
+  /* animation-duration: 4s;
+  animation-iteration-count: 1; */
+}
+
+.flex-container-image {
   background-color: #f1f1f1;
   margin-top: 150px;
   margin-bottom: 70px;
@@ -215,6 +215,37 @@ a:hover {
   animation-duration: 3s;
   animation-iteration-count: 1;
 }
+
+.flex-container-paragraph {
+  border: 1px solid black;
+  margin-top: 150px;
+  position: relative;
+  margin-bottom: 70px;
+  padding: 20px 20px;
+
+  height: 350px;
+  border-radius: 5%;
+  z-index: 0;
+  /* animation-duration: 3s;
+  animation-iteration-count: 1; */
+  /* text-align: center; */
+}
+
+/* container for picutres */
+/* .flex-container > div {
+  background-color: #f1f1f1;
+  margin-top: 150px;
+  margin-bottom: 70px;
+  padding: 20px 20px;
+  font-size: 20px;
+  width: 300px;
+  height: 350px;
+  border-radius: 5%;
+  z-index: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+} */
 
 @keyframes bounce1 {
   0% {
@@ -261,14 +292,14 @@ a:hover {
 
 .main-image2 {
   position: relative;
-  left: 450px;
+  /* left: 450px; */
   animation-name: bounce2;
   animation-timing-function: ease-out;
 }
 
 .main-image3 {
   position: relative;
-  left: 845px;
+  /* left: 845px; */
   animation-name: bounce3;
   animation-timing-function: ease-out;
 }
@@ -285,8 +316,8 @@ a:hover {
   color: rgb(44, 5, 5);
 }
 /* container for picutres */
-.flex-container > p {
-  /* background-color: #f1f1f1; */
+
+/* .flex-container > p {
   margin-top: 150px;
   position: absolute;
 
@@ -297,11 +328,10 @@ a:hover {
   border-radius: 5%;
   z-index: 0;
 
-  /* text-align: center; */
 
   animation-duration: 4s;
   animation-iteration-count: 1;
-}
+} */
 
 .first-quote {
   left: 550px;
@@ -313,15 +343,21 @@ a:hover {
   left: 135px;
   width: 300px;
   top: 575px;
+  animation-name: bounce2;
+  animation-timing-function: ease-out;
 }
 
 .third-quote {
   left: 950px;
   width: 300px;
-  top: 575px;
+  /* top: 575px; */
+  animation-name: bounce2;
+  animation-timing-function: ease-out;
 }
 .fourth-quote {
   left: 135px;
   width: 700px;
-  top: 1145px;
+  /* top: 1145px; */
+  animation-name: bounce3;
+  animation-timing-function: ease-out;
 }
