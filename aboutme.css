@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: auto;
+  font-size: 18px;
+  background: linear-gradient(
+    120deg,
+    rgba(154, 241, 255, 1) 0%,
+    rgba(206, 206, 224, 1) 40%,
+    rgba(0, 212, 255, 1) 96%
+  );
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(32, 32, 56);
+}
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  top: 30px;
+  width: 100%;
+  padding: 10px;
+  /* border: 1px solid black; */
+
+  background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.53);
+  z-index: 10;
+}
+
+.header-font {
+  font-family: "Sancreek", cursive;
+  font-size: 50px;
+  color: aqua;
+}
+.headline-container {
+  /* border: 1px solid black; */
+  display: flex;
+  position: relative;
+  width: 720px;
+  animation: header-anime 5s infinite ease-out;
+}
+@keyframes header-anime {
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: 60%;
+  }
+  100% {
+    left: 0px;
+  }
+}
+.flex-container {
+  margin: auto;
+  max-width: 1200px;
+  height: auto;
+  /* border: 1px solid black; */
+}
+.flex-container-row {
+  display: flex;
+  top: 300px;
+  margin: 5px;
+  padding: 15px;
+  /* border: 1px solid black; */
+  height: auto;
+  position: relative;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  border-radius: 10px;
+  background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #26c255 0%, #9092ee 74%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.picture-container {
+  float: left;
+  margin: 25px;
+  height: auto;
+  width: 550px;
+  padding: 25px;
+  /* border: 1px solid black; */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 5%;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+  flex-shrink: 0;
+}
+
+button {
+  font-family: "Marck Script", cursive;
+  border-radius: 10px;
+}
+.flex-font {
+  font-family: "Marck Script", cursive;
+  font-size: 25px;
+  color: black;
+}
+
+.collapsible {
+  /* background-color: #777; */
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 35px;
+  background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.53);
+}
+
+.active,
+.collapsible:hover {
+  background-image: linear-gradient(315deg, #056161 0%, #2b0129 74%);
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: aqua;
+}
+
+@media only screen and (max-width: 620px) {
+  .header-font {
+    font-size: 25px;
+  }
+  .picture-container {
+    height: auto;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .flex-font {
+    font-size: 20px;
+  }
+
+  .flex-container-row {
+    top: 150px;
+  }
+  .collapsible {
+    font-size: 25px;
+  }
+}

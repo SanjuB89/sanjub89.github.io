@@ -17,7 +17,11 @@ img {
   min-width: 100%;
   height: 100%;
 }
-
+/* 
+p {
+  min-width: 100%;
+  height: 100%;
+} */
 /* .stylesheet-king-container {
   border: 1px solid black;
   margin: 20px 40px 20px 40px;
@@ -77,15 +81,10 @@ a:hover {
   margin: 5px 40px;
   width: 75px;
   height: 75px;
-  /* border: 1px solid; */
-  /* border-radius: 20%; */
-  /* 
-  animation-duration: 5s;
-  animation-name: bounce-sign;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out; */
+  /* border: 1px solid black; */
 
   /* needs work here for parallel execution */
+  /* only one last one works */
   animation: bounce-sign 3s 1 ease-out;
   animation: rotation 2s infinite linear;
 }
@@ -123,20 +122,6 @@ a:hover {
 .menu > li:last-of-type {
   margin-right: 0;
 }
-
-/* .features-menu {
-  display: flex;
-  flex-direction: column;
-  background: #b2d6ff;
-  border-radius: 5px;
-  padding-top: 60px;
-
-  position: absolute;
-  top: -25px;
-  left: -35px;
-
-  z-index: 1;
-} */
 
 /* pseudo-classes */
 .dropdown:hover .features-menu {
@@ -180,10 +165,7 @@ a:hover {
 .flex-container {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
-  /* background: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%); */
   background-image: url("flex-background-img.jpg");
-  /* background-color: DodgerBlue; */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   margin: auto;
   max-width: 1200px;
@@ -196,9 +178,6 @@ a:hover {
   flex-direction: row;
   position: relative;
   justify-content: space-around;
-
-  /* animation-duration: 4s;
-  animation-iteration-count: 1; */
 }
 
 .flex-container-image {
@@ -228,26 +207,7 @@ a:hover {
   height: 350px;
   border-radius: 5%;
   z-index: 0;
-  /* animation-duration: 3s;
-  animation-iteration-count: 1; */
-  /* text-align: center; */
 }
-
-/* container for picutres */
-/* .flex-container > div {
-  background-color: #f1f1f1;
-  margin-top: 150px;
-  margin-bottom: 70px;
-  padding: 20px 20px;
-  font-size: 20px;
-  width: 300px;
-  height: 350px;
-  border-radius: 5%;
-  z-index: 0;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  animation-duration: 3s;
-  animation-iteration-count: 1;
-} */
 
 @keyframes bounce1 {
   0% {
@@ -287,7 +247,7 @@ a:hover {
 
 .main-image1 {
   position: relative;
-  left: 35px;
+  /* left: 35px; */
   animation-name: bounce1;
   animation-timing-function: ease-out;
 }
@@ -317,23 +277,6 @@ a:hover {
   font-size: 35px;
   color: rgb(44, 5, 5);
 }
-/* container for picutres */
-
-/* .flex-container > p {
-  margin-top: 150px;
-  position: absolute;
-
-  margin-bottom: 70px;
-  padding: 20px 20px;
-
-  height: 350px;
-  border-radius: 5%;
-  z-index: 0;
-
-
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-} */
 
 .first-quote {
   left: 550px;
@@ -352,14 +295,13 @@ a:hover {
 .third-quote {
   left: 950px;
   width: 300px;
-  /* top: 575px; */
+  top: 575px;
   animation-name: bounce2;
   animation-timing-function: ease-out;
 }
 .fourth-quote {
   left: 135px;
   width: 700px;
-  /* top: 1145px; */
   animation-name: bounce3;
   animation-timing-function: ease-out;
 }
@@ -369,7 +311,9 @@ a:hover {
     font-size: 30px;
   }
   .logo {
-    align-items: center;
+    margin: auto;
+    width: 50px;
+    height: 50px;
   }
   .header {
     flex-direction: column;
@@ -381,27 +325,49 @@ a:hover {
     font-size: 20px;
     border-bottom: 1px solid whitesmoke;
     height: 35px;
-    /* text-align: center; */
   }
-  /* .menu :first-of-type {
-    border-top: 1px solid whitesmoke;
-  } */
 
   .flex-container-row {
     flex-direction: column;
     justify-content: space-around;
+    min-width: 100%;
+    height: 100%;
   }
 
   .flex-container {
     margin-top: 250px;
+    min-width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
   }
-
+  .quotation-font {
+    font-size: 30px;
+    text-align: left;
+  }
   .flex-container-paragraph {
     min-width: 100%;
+    height: 100%;
+    padding: 15px;
+    align-items: center;
+    /* border: 1px solid black; */
+  }
+
+  .flex-container-image {
+    margin-right: 20px;
+    margin-left: 20px;
   }
   .dropdown:hover .features-menu {
     position: absolute;
     right: 50px;
+  }
+
+  .first-quote,
+  .second-quote,
+  .third-quote,
+  .fourth-quote {
+    left: 5px;
+    width: 100%;
+    height: 100%;
   }
 
   .features-menu li {

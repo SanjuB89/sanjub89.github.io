@@ -3,14 +3,128 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="aboutme.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap"
+      rel="stylesheet"
+    />
+
     <title>About me</title>
   </head>
   <body>
-    <div>
-      <div><h1>Student Picture</h1></div>
-      <div>7-eleven picture</div>
+    <div class="header">
+      <div class="headline-container header-font">
+        ~: Know more about me :~
+      </div>
     </div>
-    <h1>This page is about me</h1>
-    <h2>Contents coming soon....</h2>
+    <div class="flex-container flex-font">
+      <div class="flex-container-row">
+        <h1><strong>Sanju Byanjankar</strong></h1>
+        <button type="button" class="collapsible">
+          <em>Background</em>
+        </button>
+        <div class="content">
+          <div class="picture-container">
+            <img src="website-pictures/nepal-political-map.jpg" />
+          </div>
+
+          <p><br>
+            Born and raised in Kathmandu, Nepal which is located in between
+            India and China; people also call it the top of the world. Mount
+            Everest is one of the many tourist attractions of Nepal. <br />
+            <br />
+            Graduated high school with Physics major, and joined a web-page
+            design course just for fun. I have been a computer science student
+            since 2007. <br /><br />
+            I have been a very active person since I was a child. I would take
+            part in various activities like soccer, music, painting, basketball
+            and many more. I was sent to one of the most popular schools of
+            Nepal which was way off of my family's budget. My parent's struggle
+            and dedication made me who I am today.
+          </p>
+        </div>
+        <button type="button" class="collapsible">
+          <em>Top Five Favorite Bands</em>
+        </button>
+        <div class="content">
+          <div class="picture-container">
+            <img src="website-pictures/iron-maiden.jpg" />
+          </div>
+          <p>
+            <br><br>
+            Nirvana was the first band I consistently listened to when I was in
+            the 5th grade and I got pretty obsessed with punk genre. In no time,
+            I was drawn into heavy metal and psychedelia progressive rock. Iron
+            Maiden is one the best bands I grew up playing. I play drums, guitar
+            and learning piano right now. 
+          
+          <ul>
+            <li><a href="https://www.ironmaiden.com/" target="_blank" >Iron Maiden</a></li>
+            <li><a href="https://www.pinkfloyd.com/home.php" target="_blank">Pink Floyd</a> </li>
+            <li><a href="https://www.aperfectcircle.com/" target="blank">A Perfect Circle</a></li>
+            <li><a href="https://www.nirvana.com/" target="blank">Nirvana</a></li>
+            <li><a href="https://www.gunsnroses.com/" target="blank">Guns and Roses</a></li>
+          </ul>
+
+            I have played in multiple underground
+            concerts in Nepal and have participated in number of musical
+            festivals organized by University of Central Oklahoma, and Oklahoma
+            University in Oklahoma.
+          </p>
+        </div>
+        <button type="button" class="collapsible">
+          <em>Top Five Favorite Songs</em>
+        </button>
+        <div class="content">
+          <p><br>
+            As I mentioned earlier, I started with Punk and I am into heavy metal and psychedelics
+             genre these days. Following are my top five favorite songs: 
+          <ul>
+            <li><a href="https://youtu.be/p32b5nNq1zw" target="_blank">Fear of the Dark (By Iron Maiden)</a></li>
+            <li><a href="https://youtu.be/_FrOQC-zEog" target="_blank">Comfortably Numb (By Pink Floyd)</a></li>
+            <li><a href="https://youtu.be/cWGE9Gi0bB0" target="_blank">Shine On you crazy Diamond (By Pink Floyd)</a></li>
+            <li><a href="https://youtu.be/_cDdMZ2K9o0" target="_blank">Gravity (A Perfect Circle)</a></li>
+            <li><a href="https://youtu.be/8SbUC-UaAxE" target="_blank">November Rain (Guns and Roses)</a></li>
+          </ul>
+          </p>
+        </div>
+
+        <button type="button" class="collapsible">
+          <em>Top Five On My Bucket List</em>
+        </button>
+        <div class="content">
+          <p><br>
+            I am an extremely ambitious individual and I live like there is no tomorrow. 
+            There are plenty of adventures I look forward to in my life but these are the top fice and 
+            long term goals of my life.
+          <ul>
+            <li>Explore South Asia</li>
+            <li>Get Master's Degree in Data Science/Artificial Intelligence</li>
+            <li>Trek to Mt. Everest Base Camp</li>
+            <li>Invent Something for humanity</li>
+          </ul>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
   </body>
 </html>
